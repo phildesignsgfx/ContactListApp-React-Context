@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import "../../styles/add-contact.css";
+import rigoImageUrl2 from "../../img/images.png";
 
 export const AddContact = () => {
   const [name, setName] = useState("");
@@ -11,8 +12,13 @@ export const AddContact = () => {
   const [address, setAddress] = useState("");
 
   return (
-    <div className="container">
-      <h1 className="header">Add a new contact</h1>
+    <div className="container ">
+        <h1 className="display-4">Add a new contact</h1>
+        <img src={rigoImageUrl2} />
+        <br />
+        <br />
+        <div class="form">
+        <div class="input-container ic1">
       <p>Full Name</p>
       <input
         type="text"
@@ -20,6 +26,8 @@ export const AddContact = () => {
         value={name}
         placeholder="Full name"
       />
+      <div/>
+      <div class="input-container ic2">
       <p>Email</p>
       <input
         type="text"
@@ -27,6 +35,8 @@ export const AddContact = () => {
         value={email}
         placeholder="Enter Email"
       />
+      </div>
+      <div class="input-container ic2">
       <p>Phone</p>
       <input
         type="text"
@@ -34,6 +44,8 @@ export const AddContact = () => {
         value={phone}
         placeholder="Enter Phone Number"
       />
+      </div>
+      <div class="input-container ic2">
       <p>Address</p>
       <input
         type="text"
@@ -41,8 +53,10 @@ export const AddContact = () => {
         value={address}
         placeholder="Enter Address"
       />
+      </div>
       <br />
-      <Button
+    
+      <Button type="button" class="btn btn-primary btn-sm"
         onClick={() => {
           console.log("Here I am");
           fetch("https://playground.4geeks.com/apis/fake/contact", {
@@ -64,9 +78,13 @@ export const AddContact = () => {
         save
       </Button>
       <br />
+      <br />
+      
       <Link to="/">
-        <button className="goback-button">Go back to contact-list</button>
+      <button type="button" class="btn btn-secondary btn-sm">Go back to contact-list</button>
       </Link>
+    </div>
+    </div>
     </div>
   );
 };
