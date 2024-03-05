@@ -6,3 +6,30 @@
     flex: right;
   }
   
+
+  .circular--square { border-radius: 50%; }
+
+
+  .box1{
+    border-radius: 25px;
+
+    background: #ffffff;
+    padding: 20px;
+    width: 600px;
+    height: 340px;
+  }
+
+  .box1{
+    text-align: left;
+  }
+
+
+  .p-2{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

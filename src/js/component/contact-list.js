@@ -31,23 +31,28 @@ export const ContactList = () => {
 
   return (
     <div className="container">
+        
       {contacts.map((contact) => {
         return (
           <Stack direction="horizontal" gap={3}>
             <div className="p-2">
-              <img
-                src="https://yt3.googleusercontent.com/By7y3DgW6vAJEVRzzA1-xQCgklqiRyP3ZQA-u1I6kdckEryMmTK6mr7alRfklIO1Jrp2t3_A=s900-c-k-c0x00ffffff-no-rj"
+              <img class="circular--square"
+                src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"
                 width="150px"
               />
             </div>
+          
             <div className="p-2">
-              <Stack>
-                <div className="p-2">{contact.full_name}</div>
-                <div className="p-2">{contact.address}</div>
-                <div className="p-2">{contact.phone}</div>
-                <div className="p-2">{contact.email}</div>
+              <Stack className="box1">
+                <div className="p-2"><p><strong>Name:<strong/></strong>{contact.full_name}</p></div>
+                <div className="p-2"><p><strong>Address:<strong/></strong>{contact.address}</p></div>
+                <div className="p-2"><p><strong>Phone:<strong/></strong>{contact.phone}</p></div>
+                <div className="p-2"><p><strong>Email:<strong/></strong>{contact.email}</p></div>
               </Stack>
             </div>
+            
+           
+            
             <div className="p-2 icons">
               <FontAwesomeIcon icon={faPencil} />
             </div>
@@ -71,6 +76,7 @@ export const ContactList = () => {
               />
             </div>
           </Stack>
+          
         );
       })}
     </div>

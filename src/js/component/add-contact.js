@@ -44,7 +44,7 @@ export const AddContact = () => {
       <br />
       <Button
         onClick={() => {
-          console.log("adam is a BITCH<3");
+          console.log("Here I am");
           fetch("https://playground.4geeks.com/apis/fake/contact", {
             method: "POST",
             body: JSON.stringify({
